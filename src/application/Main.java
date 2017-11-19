@@ -1,5 +1,5 @@
 package application;
-	
+
 import java.io.File;
 import java.util.regex.Pattern;
 
@@ -27,20 +27,21 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			Main.primaryStage = primaryStage;
-			
+
 			Main.chemin = System.getProperty("user.dir").toString().replaceAll("\\\\", "\\\\\\\\")+"\\\\Base.xls";
 			Main.cheminTemp = System.getProperty("user.dir").toString().replaceAll("\\\\", "\\\\\\\\")+"\\\\temp.xls";
-		    
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	public static Stage getStage(){
 		return primaryStage;
 	}
 }
+//Main

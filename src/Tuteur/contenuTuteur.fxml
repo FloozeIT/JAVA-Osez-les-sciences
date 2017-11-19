@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="BOTTOM_LEFT" hgap="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1180.0" style="-fx-background-color: #ecf0f1;" vgap="50.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tuteur.contenuTuteurController">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="548.0" prefWidth="342.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="342.0" style="-fx-background-color: #3E2723;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Liste de vos lycéens" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="26.0" layoutY="14.0">
+                     <image>
+                        <Image url="@list.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="NEVER" layoutY="68.0" prefHeight="480.0" prefWidth="342.0">
+               <content>
+                  <JFXDrawer fx:id="drawerList" alignment="TOP_CENTER" defaultDrawerSize="0.0" direction="TOP" overLayVisible="false" prefHeight="478.0" prefWidth="339.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane prefHeight="548.0" prefWidth="735.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="735.0" style="-fx-background-color: #607D8B;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Emploi du temps de l'étudiant" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="25.0" layoutY="15.0">
+                     <image>
+                        <Image url="@calendar-with-a-clock-time-tools.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="118.0" prefHeight="407.0" prefWidth="173.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Label fx:id="int8" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="104.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Label fx:id="men8" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="205.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Label fx:id="ens8" alignment="CENTER" contentDisplay="CENTER" layoutY="315.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="22.0" layoutY="46.0" text="Intitulé" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="19.0" layoutY="158.0" text="Mention" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="12.0" layoutY="258.0" text="Enseignant" textFill="WHITE" />
+                  <Separator layoutX="14.0" layoutY="133.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="14.0" layoutY="93.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="234.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="194.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="343.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="303.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+               </children>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="89.0" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="24.0" layoutY="11.0" text="8:00 - 10:00" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="191.0" layoutY="118.0" prefHeight="407.0" prefWidth="173.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Label fx:id="int10" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="104.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Label fx:id="men10" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="205.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Label fx:id="ens10" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="315.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="22.0" layoutY="46.0" text="Intitulé" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="19.0" layoutY="158.0" text="Mention" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="12.0" layoutY="258.0" text="Enseignant" textFill="WHITE" />
+                  <Separator layoutX="14.0" layoutY="133.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="14.0" layoutY="93.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="234.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="194.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="343.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="303.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+               </children>
+            </Pane>
+            <Pane layoutX="205.0" layoutY="89.0" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="19.0" layoutY="11.0" text="10:00 - 12:00" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="372.0" layoutY="118.0" prefHeight="407.0" prefWidth="173.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Label fx:id="int14" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="104.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Label fx:id="men14" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="205.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Label fx:id="ens14" alignment="CENTER" contentDisplay="CENTER" layoutX="-6.0" layoutY="315.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="22.0" layoutY="46.0" text="Intitulé" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="19.0" layoutY="158.0" text="Mention" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="12.0" layoutY="258.0" text="Enseignant" textFill="WHITE" />
+                  <Separator layoutX="14.0" layoutY="133.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="14.0" layoutY="93.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="234.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="194.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="343.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="303.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+               </children>
+            </Pane>
+            <Pane layoutX="554.0" layoutY="118.0" prefHeight="407.0" prefWidth="173.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Label fx:id="int16" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="104.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Label fx:id="men16" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="205.0" prefHeight="21.0" prefWidth="182.0" />
+                  <Label fx:id="ens16" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="315.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="22.0" layoutY="46.0" text="Intitulé" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="19.0" layoutY="158.0" text="Mention" textFill="WHITE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#476b65" height="30.0" layoutX="2.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+                  <Label layoutX="12.0" layoutY="258.0" text="Enseignant" textFill="WHITE" />
+                  <Separator layoutX="14.0" layoutY="133.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="14.0" layoutY="93.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="234.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="17.0" layoutY="194.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="343.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+                  <Separator layoutX="16.0" layoutY="303.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;" />
+               </children>
+            </Pane>
+            <Pane layoutX="388.0" layoutY="89.0" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="18.0" layoutY="11.0" text="14:00 - 16:00" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="567.0" layoutY="89.0" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="18.0" layoutY="11.0" text="16:00 - 18:00" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</FlowPane>

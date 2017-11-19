@@ -1,0 +1,198 @@
+package Etudiant;
+
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.shape.Line;
+
+
+public class InterfaceGlobaleEtudController implements Initializable {
+
+    @FXML
+    private JFXDrawer drawer;
+    
+    @FXML
+    private JFXDrawer drawer2;
+
+    @FXML
+    private JFXHamburger hamburger;
+    
+    @FXML
+    private Label lblEtud;
+    
+    @FXML
+    private JFXButton lundi;
+    
+    @FXML
+    private JFXHamburger hamburger2;
+    
+    @FXML
+    private AnchorPane root;
+    
+    @FXML
+    private Line ligne;
+    
+    @FXML
+    private JFXDrawer drawer3;
+    
+    @FXML
+    private Pane paneTop;
+    
+    @FXML
+    private GridPane gridDay;
+    
+    @FXML
+    private StackPane stackPane;
+    
+    @FXML
+    protected static JFXDrawer drawerRefresh;
+    
+    public static AnchorPane rootP;
+    public static Label lblEtudP;
+    public static JFXDrawer drawer3P;
+    public static String drawerNameP="Lundi";
+    public static StackPane stackPaneP;
+    
+	@Override
+    public void initialize(URL url, ResourceBundle rb) {
+        rootP = root;
+        lblEtudP=lblEtud;
+        stackPaneP=stackPane;
+        
+		FlowPane contenu;
+		try {
+			contenu = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+			drawer3.setSidePane(contenu);	             
+			drawer3.open();
+            drawer3P=drawer3;
+			
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                
+        try {
+            VBox box = FXMLLoader.load(getClass().getResource("SidePanelContentEtud.fxml"));
+            drawer.setSidePane(box);
+            drawer.open();
+        } catch (IOException ex) {
+            Logger.getLogger(InterfaceGlobaleEtudController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        HamburgerBackArrowBasicTransition transition = new HamburgerBackArrowBasicTransition(hamburger);
+        transition.setRate(-1);
+        hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED,(e)->{
+            transition.setRate(transition.getRate()*-1);
+            transition.play();
+            
+            if(drawer.getStyle().equals("-fx-translate-x:310")){
+            	drawer.close();
+            	drawer.setStyle("-fx-translate-x:-310");
+            }
+            else{
+            	drawer.open();
+            	drawer.setStyle("-fx-translate-x:310");
+            	hamburger.toFront();
+            }
+            
+        });
+        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+        try {
+            HBox box2 = FXMLLoader.load(getClass().getResource("SidePanelContentEtud2.fxml"));
+            drawer2.setSidePane(box2);
+        } catch (IOException ex) {
+            Logger.getLogger(InterfaceGlobaleEtudController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                  
+        hamburger2.addEventHandler(MouseEvent.MOUSE_PRESSED,(e)->{
+            if(drawer2.isShown())
+            {
+            	drawer2.close();
+            	drawer2.toBack();
+            }else
+                drawer2.open();
+            	drawer2.toFront();
+        });
+        drawerRefresh=drawer3;
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////    
+    @FXML
+    private void clic2(ActionEvent event) throws Exception {
+        JFXButton btn = (JFXButton) event.getSource();
+        
+        switch(btn.getText())
+        {
+            case "LUNDI":drawerNameP="Lundi"; 
+            			 ligne.setStartX(-117.9);
+            			 ligne.setEndX(117.9);
+            			 FlowPane contenuLP = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+            			 drawer3.setSidePane(contenuLP);	             
+    		             drawer3.open();
+
+    		              	
+    		             
+            break;
+            case "MARDI":drawerNameP="Mardi";
+            			 ligne.setStartX(117.9);
+			 			 ligne.setEndX(353.7);
+            			 FlowPane contenuMAP = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+            			 drawer3.setSidePane(contenuMAP);	             
+    		             drawer3.open();
+    		            
+    		             
+            break;
+            case "MERCREDI": drawerNameP="Mercredi";
+            				ligne.setStartX(353.7);
+			 			 	ligne.setEndX(589.5);
+	            			FlowPane contenuMEP = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+	            			drawer3.setSidePane(contenuMEP);	             
+	    		            drawer3.open();
+	    		             
+	    		             
+			break;
+			case "JEUDI": drawerNameP="Jeudi";
+						 ligne.setStartX(589.5);
+						 ligne.setEndX(825.3);
+                		 FlowPane contenuJP = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+            			 drawer3.setSidePane(contenuJP);	             
+    		             drawer3.open();
+    		             
+			break;
+			case "VENDREDI": drawerNameP="Vendredi";
+							ligne.setStartX(825.3);
+			 			 	ligne.setEndX(1061.8);
+            			    FlowPane contenuVP = FXMLLoader.load(getClass().getResource("contenuInscription.fxml"));
+            			    drawer3.setSidePane(contenuVP);	             
+    		                drawer3.open(); 		            
+			break;
+                
+        }
+
+}
+    
+}

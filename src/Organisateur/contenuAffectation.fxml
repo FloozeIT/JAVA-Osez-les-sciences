@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="BOTTOM_LEFT" hgap="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1180.0" style="-fx-background-color: #ecf0f1;" vgap="50.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Organisateur.contenuAffectationController">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Pane fx:id="ajoutPane" prefHeight="548.0" prefWidth="342.0" style="-fx-background-color: #ffffff;" stylesheets="@main2.css">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="342.0" style="-fx-background-color: #6C7A89;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Ajout d'un tuteur" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="26.0" layoutY="14.0">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton fx:id="validate" buttonType="RAISED" layoutX="108.0" layoutY="462.0" onAction="#valider" prefHeight="46.0" prefWidth="105.0" ripplerFill="#34495ecf" style="-fx-background-color: #009688;" text="Valider" textFill="WHITE" />
+            <JFXTextField fx:id="txtNom" labelFloat="true" layoutX="34.0" layoutY="106.0" prefHeight="29.0" prefWidth="253.0" promptText="Nom*" />
+            <JFXTextField fx:id="txtPrenom" labelFloat="true" layoutX="34.0" layoutY="181.0" prefHeight="29.0" prefWidth="253.0" promptText="Prenom*" />
+            <JFXTextField fx:id="txtMail" labelFloat="true" layoutX="34.0" layoutY="252.0" prefHeight="29.0" prefWidth="253.0" promptText="Adresse Mail*" />
+            <JFXTextField fx:id="user" labelFloat="true" layoutX="34.0" layoutY="323.0" prefHeight="29.0" prefWidth="253.0" promptText="Username*" />
+            <JFXTextField fx:id="pass" labelFloat="true" layoutX="34.0" layoutY="391.0" prefHeight="29.0" prefWidth="253.0" promptText="Password*" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="affectation" prefHeight="548.0" prefWidth="735.0" style="-fx-background-color: #ffffff;" stylesheets="@main2.css">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="735.0" style="-fx-background-color: #847858;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Affectation Tuteur / Lycéen" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="24.0" layoutY="14.0">
+                     <image>
+                        <Image url="@unlink.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="602.0" layoutY="14.0" onAction="#affect" prefHeight="37.0" prefWidth="105.0" ripplerFill="#946924cf" style="-fx-background-color: #009688;" text="Affecter" textFill="WHITE" />
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="126.0" prefHeight="387.0" prefWidth="305.0" style="-fx-background-color: #F4F4F4;">
+               <content>
+                  <JFXDrawer fx:id="drawerT" defaultDrawerSize="0.0" direction="TOP" overLayVisible="false" prefHeight="384.0" prefWidth="303.0" style="-fx-background-color: #F4F4F4;">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding></JFXDrawer>
+               </content>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ScrollPane>
+            <ScrollPane layoutX="393.0" layoutY="126.0" prefHeight="387.0" prefWidth="305.0" style="-fx-background-color: #F4F4F4;">
+               <content>
+                  <JFXDrawer fx:id="drawerL" defaultDrawerSize="0.0" direction="TOP" overLayVisible="false" prefHeight="384.0" prefWidth="303.0" style="-fx-background-color: #F4F4F4;" />
+               </content>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ScrollPane>
+            <Pane layoutX="423.0" layoutY="90.0" prefHeight="58.0" prefWidth="200.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="35.0" layoutY="16.0" text="Liste des lycéens" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="67.0" layoutY="90.0" prefHeight="58.0" prefWidth="200.0" style="-fx-background-color: #7BB0A6;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="34.0" layoutY="16.0" text="Liste des tuteurs" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</FlowPane>

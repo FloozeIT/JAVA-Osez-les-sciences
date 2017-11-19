@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="BOTTOM_LEFT" hgap="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1180.0" style="-fx-background-color: #ecf0f1;" vgap="50.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Organisateur.contenuConsultReserController">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <VBox prefHeight="548.0" prefWidth="303.0">
+         <children>
+            <Pane prefHeight="550.0" prefWidth="303.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane prefHeight="68.0" prefWidth="303.0" style="-fx-background-color: #27ae60;">
+                     <effect>
+                        <Glow>
+                           <input>
+                              <DropShadow height="0.0" radius="2.0" width="10.0" />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label layoutX="78.0" layoutY="20.0" text="Filtrage des réservations" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="16.0" layoutY="13.0">
+                           <image>
+                              <Image url="@filter.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton buttonType="RAISED" layoutX="105.0" layoutY="464.0" onAction="#filtre" prefHeight="37.0" prefWidth="91.0" ripplerFill="#34495ecf" style="-fx-background-color: #009688;" text="Valider" textFill="WHITE" />
+                  <Label layoutX="41.0" layoutY="348.0" text="Cours proposés : " textFill="#000000ca" />
+                  <JFXToggleButton fx:id="heure" layoutX="27.0" layoutY="82.0" onMouseClicked="#select" text="Par heure" />
+                  <JFXToggleButton fx:id="mat" layoutX="28.0" layoutY="274.0" onMouseClicked="#select" text="Par matière" />
+                  <ComboBox fx:id="choiceMat" layoutX="36.0" layoutY="393.0" prefHeight="31.0" prefWidth="240.0" />
+                  <ComboBox fx:id="choiceHeure" layoutX="36.0" layoutY="204.0" prefHeight="31.0" prefWidth="240.0" />
+                  <Label layoutX="40.0" layoutY="157.0" text="Crénaux disponibles : " textFill="#000000ca" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane prefHeight="548.0" prefWidth="774.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="774.0" style="-fx-background-color: #2980b9;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Réservations faites" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="13.0">
+                     <image>
+                        <Image url="@open-book.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXDrawer fx:id="drawerTab2" direction="BOTTOM" layoutY="68.0" overLayVisible="false" prefHeight="480.0" prefWidth="774.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</FlowPane>

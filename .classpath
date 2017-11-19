@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Flo/workspace/JFXMaterial-master/JFXMaterial-Demo/dist/lib/JFXMaterial.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Flo/workspace/JFXMaterial-master/JFXMaterial-Demo/dist/JFXMaterialDemo.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Flo/Desktop/ISIS/2EME ANNEE/Semestre 2/Projet JAVA/Osez_les_sciences_JANELA_BAZILE/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Flo/Desktop/ISIS/2EME ANNEE/Semestre 2/Projet JAVA/Osez_les_sciences_JANELA_BAZILE/jfoenix.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="BOTTOM_LEFT" hgap="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1180.0" style="-fx-background-color: #ecf0f1;" vgap="50.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Etudiant.contenuInscriptionController">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Pane fx:id="paneInscri" prefHeight="550.0" prefWidth="342.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="342.0" style="-fx-background-color: #34495e;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Inscription aux enseignements" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="26.0" layoutY="14.0">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ComboBox fx:id="intitule" layoutX="37.0" layoutY="194.0" onAction="#select2" prefHeight="31.0" prefWidth="251.0" />
+            <Label layoutX="20.0" layoutY="166.0" text="Intitulé du cours : " textFill="#000000b8" />
+            <ComboBox fx:id="creneaux" layoutX="35.0" layoutY="116.0" onAction="#select" prefHeight="31.0" prefWidth="251.0" />
+            <Label layoutX="20.0" layoutY="89.0" text="Créneaux : " textFill="#000000b8" />
+            <JFXTextField fx:id="mention" labelFloat="true" layoutX="34.0" layoutY="259.0" prefHeight="29.0" prefWidth="251.0" promptText="Mention" />
+            <JFXTextField fx:id="enseignant" labelFloat="true" layoutX="33.0" layoutY="324.0" prefHeight="29.0" prefWidth="251.0" promptText="Enseignant" />
+            <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="457.0" onAction="#valider" prefHeight="46.0" prefWidth="105.0" ripplerFill="#34495ecf" style="-fx-background-color: #009688;" text="Valider" textFill="WHITE" />
+            <JFXToggleButton fx:id="RU" layoutX="57.0" layoutY="382.0" text="Repas universitaire" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane prefHeight="381.0" prefWidth="735.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="735.0" style="-fx-background-color: #9d3c00;">
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="0.0" radius="2.0" width="10.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="88.0" layoutY="19.0" text="Consultations des réservations" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="19.0" layoutY="14.0">
+                     <image>
+                        <Image url="@eye.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="supr" buttonType="RAISED" layoutX="616.0" layoutY="14.0" prefHeight="37.0" prefWidth="105.0" ripplerFill="#34495ecf" style="-fx-background-color: #009688;" text="Supprimer" textFill="WHITE" />
+               </children>
+            </Pane>
+            <JFXDrawer fx:id="drawerTab" direction="BOTTOM" layoutY="68.0" overLayVisible="false" prefHeight="480.0" prefWidth="735.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</FlowPane>

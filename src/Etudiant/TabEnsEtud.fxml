@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.FlowPane?>
+
+<FlowPane fx:id="main" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Etudiant.TabEnsEtudController">
+   <children>
+      <JFXTreeTableView fx:id="treeView" onMouseClicked="#del" prefHeight="480.0" prefWidth="735.0" stylesheets="@main.css" />
+   </children>
+</FlowPane>

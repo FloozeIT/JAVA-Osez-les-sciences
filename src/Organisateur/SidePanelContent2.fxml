@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="298.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Organisateur.SidePanelContentController">
+   <children>
+      <JFXButton fx:id="b1" onAction="#deco" prefHeight="72.0" prefWidth="149.0" ripplerFill="#16a085" style="-fx-background-color: #f1f1f1;" text="Déconnexion" />
+      <JFXButton fx:id="b2" onAction="#aide" prefHeight="72.0" prefWidth="149.0" ripplerFill="#16a085" style="-fx-background-color: #f1f1f1;" text="Aide" />
+   </children>
+</HBox>

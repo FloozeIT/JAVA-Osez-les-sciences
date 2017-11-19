@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="674.0" prefWidth="304.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tuteur.SidePanelContentController">
+   <children>
+      <AnchorPane prefHeight="172.0" prefWidth="304.0">
+         <children>
+            <ImageView fitHeight="178.0" fitWidth="304.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="14.0" layoutY="50.0">
+               <image>
+                  <Image url="@teacher.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="105.0" layoutY="65.0" text="Connecté en tant que : ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Text fx:id="change" layoutX="152.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuteur" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="b2" layoutX="10.0" layoutY="123.0" onAction="#clic" prefHeight="52" prefWidth="303.0" ripplerFill="#16a085" style="-fx-background-color: #f1f1f1; -fx-border-color: #F5DA81;" text="     Consultation de mes affectations" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="24.0">
+               <image>
+                  <Image url="@view.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</VBox>

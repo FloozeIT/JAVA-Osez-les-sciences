@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Organisateur.dialogController">
+   <children>
+      <JFXTextArea editable="false" layoutX="43.0" layoutY="58.0" prefHeight="310.0" prefWidth="609.0" text="&#10;Vous pouvez créer et supprimer des cours suivant le jour sélectionné. Les cours déjà créés pour ce jour sont présents dans le tableau &quot;Enseignements enregistrés&quot;.&#10;&#10;Vous pouvez basculer sur une autre interface grâce à l'hamburger situé en haut à gauche de l'application. Pour connaître la liste des étudiants inscris à vos cours, il faut choisir &quot;Consultation des réservations&quot; dans l'hamburger.&#10;&#10;La liste des étudiants qui se sont inscrits apparaît dans un tableau. Vous pouvez filtrer ces réservations en fonction de l'horaire et/ou de la matière.&#10;&#10;Enfin, vous pouvez créer des comptes tuteurs et affecter chaque lycéen à un tuteur. Pour cela, il faut aller sur &quot;Affectation Lycéen / Tuteurs&quot; dans l'hamburger. Cette interface est assez intuitive." />
+      <JFXButton onAction="#close" buttonType="RAISED" layoutX="298.0" layoutY="395.0" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: #336e7b;" text="Fermer" textFill="WHITE" />
+      <Line endX="370.0" layoutX="345.0" layoutY="20.0" startX="-370.0" stroke="#336e7b" strokeWidth="1.5" />
+      <Pane layoutX="131.0" layoutY="-8.0" prefHeight="55.0" prefWidth="433.0" style="-fx-background-color: #019875;">
+         <children>
+            <Label layoutX="9.0" layoutY="14.0" style="-fx-font-family: roboto; -fx-font-size: 20;" text="Guide d'utilisation pour l'interface organisateur" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</Pane>

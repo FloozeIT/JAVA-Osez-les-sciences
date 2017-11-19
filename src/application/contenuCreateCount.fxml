@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.accountController">
+   <children>
+      <Pane prefHeight="671.0" prefWidth="534" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <JFXTextField fx:id="txtNom" labelFloat="true" layoutX="46.0" layoutY="126.0" prefHeight="29.0" prefWidth="452.0" promptText="Nom*" />
+            <JFXTextField fx:id="txtPrenom" labelFloat="true" layoutX="47.0" layoutY="195.0" prefHeight="29.0" prefWidth="452.0" promptText="Prenom*" />
+            <JFXTextField fx:id="txtMail" labelFloat="true" layoutX="49.0" layoutY="256.0" prefHeight="29.0" prefWidth="452.0" promptText="Adresse Mail*" />
+            <JFXToolbar layoutX="94.0" layoutY="446.0" prefHeight="72.0" prefWidth="341.0">
+               <right>
+                  <JFXToggleButton fx:id="etud" onAction="#check" prefHeight="72.0" prefWidth="164.0" text="Etudiant" BorderPane.alignment="CENTER" />
+               </right>
+               <center>
+                  <JFXToggleButton fx:id="orga" onAction="#check" prefHeight="72.0" prefWidth="189.0" text="Organisateur" BorderPane.alignment="CENTER" />
+               </center>
+            </JFXToolbar>
+            <JFXTextField fx:id="id" labelFloat="true" layoutX="112.0" layoutY="529.0" prefHeight="29.0" prefWidth="306.0" promptText="ID*" />
+            <JFXButton fx:id="retour" buttonType="RAISED" layoutX="143.0" layoutY="595.0" onAction="#retour" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: #16a085;" text="Retour" textFill="WHITE" />
+            <Label layoutX="130.0" layoutY="18.0" text="Création de votre compte">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="265.0" layoutY="62.0" startX="-100.0" strokeWidth="0.5" />
+            <JFXTextField fx:id="user" labelFloat="true" layoutX="51.0" layoutY="318.0" prefHeight="29.0" prefWidth="452.0" promptText="Username*" />
+            <JFXTextField fx:id="pass" labelFloat="true" layoutX="50.0" layoutY="386.0" prefHeight="29.0" prefWidth="452.0" promptText="Password*" />
+            <JFXButton fx:id="validate" buttonType="RAISED" layoutX="305.0" layoutY="595.0" onAction="#sortir" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: #16a085;" text="Valider" textFill="WHITE" />
+            <Text fx:id="txtCheck" layoutX="145.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Please, enter your information" wrappingWidth="239.00000143051147" />
+         </children></Pane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

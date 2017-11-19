@@ -1,0 +1,8 @@
+.jfx-hamburger StackPane{
+	-fx-background-color:white ;
+}
+
+.changeColor{
+	-fx-text-fill: white;
+}
+
